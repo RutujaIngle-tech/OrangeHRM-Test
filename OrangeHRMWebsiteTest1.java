@@ -47,13 +47,13 @@ public class OrangeHRMWebsiteTest1 {
 	public void afterMethodCode() {
 		driver.close();
 	}
-
+@Test
 	public void tc11VerifyDashboardPage() {
 		String CurrentUrl = driver.getCurrentUrl();
 		String expUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
 		Assert.assertEquals(CurrentUrl, expUrl);
 	}
-
+@Test
 	void tc12VerifyUserProfileImageisvisible() {
 		Assert.assertTrue(
 				driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/img"))
@@ -61,7 +61,7 @@ public class OrangeHRMWebsiteTest1 {
 				"logo  is not visible");
 	}
 
-	
+	@Test
 	public void tc13VerifyTimeatWorkwidgetisvisible() {
 		String check = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div"))
 				.getAccessibleName();
@@ -69,7 +69,7 @@ public class OrangeHRMWebsiteTest1 {
 
 	}
 
-	
+	@Test
 	public void tc14CheckPunchInOuttimedisplayedcorrectly() {
 		String check = driver
 				.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[2]/div[1]/div[1]/div[2]/p[2]"))
@@ -101,7 +101,7 @@ driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/f
 
 	}
 
-	
+	@Test
 	public void tc18Checkcandidatetointerviewlink() {
 		driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div/div[2]/div/div/p")).click();
 	}
